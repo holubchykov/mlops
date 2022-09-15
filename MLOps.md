@@ -21,7 +21,7 @@ The use of code versioning tools is vital in the software development industry. 
 As much as these tools solve several problems in software development, there are still issues in machine learning projects. Code versioning is still crucial, but when working on new experiments it's important to guarantee the same properties for data and models.
 
 In a machine learning project, data scientists are continuously working on the development of new models. This process relies on trying different combinations of data, parameters, and algorithms. It's extremely positive to create an environment where it's possible to go back and forth on older or new experiments.
-![image.png](/.attachments/image-9f76a2ed-bdbf-4de2-a61e-7fdc710891fc.png)
+![image](https://user-images.githubusercontent.com/88195980/190283146-82f948b4-9cd2-4030-bd80-89bffbc49070.png)
 
 ### Reproducibility
 When discussing versioning, it's important to understand the term reproducibility. While versioning data, models, and code we are able to create a nice environment for data scientists to achieve the ultimate goal that is a good working model, there is a huge gap between this positive experiment to operationalize it.
@@ -41,7 +41,7 @@ To guarantee that the experimentation of the data science team will become a mod
 ## Feature Storing
 ### What is a Feature Store?
 **Feature Stores** are components of data architecture that are becoming increasingly popular in the Machine Learning and MLOps environment. The goal of a Feature Store is to process data from various data sources at the same time and turn it into features, which will be consumed by the model training pipeline and the model serving. The concept of Feature Stores is novice and rapidly changing, therefore this page has the objective of showing the key features that are more common among the main Feature Stores in the market, but at the same time it is important to note that some of the tools and frameworks in the market might not comprehend all those exact characteristics in the same manner.
-![image.png](/.attachments/image-52d29209-8865-4df8-a7eb-68aaf71b1270.png)
+![image](https://user-images.githubusercontent.com/88195980/190283188-2704a8aa-57c1-412d-9d4d-aae40b99f841.png)
 ### Why it matters?
 Feature Stores can be very useful for Machine Learning in production and are very reliable ways to manage features for research and training using Offline Stores, as it is to manage the feeding of features to a model served in production using an Online Store. This data component can manage to comprehend a wide spectrum of different projects and necessities, some of which are seen below.
 
@@ -89,7 +89,7 @@ Lets describe a three-level of automation in machine learning projects:
 
 The next diagram describes process of model retraining
 
-![image.png](/.attachments/image-e299c453-112a-4362-91ce-b068ffd04c8e.png)
+![image](https://user-images.githubusercontent.com/88195980/190283220-7d8316a4-028d-45f8-b7e3-0b78313224ee.png)
 <!-- blank line -->
 
 -------------------------------------------
@@ -98,7 +98,7 @@ The next diagram describes process of model retraining
 
 Just like in DevOps, CI/CD is a method to make changes more frequently by automating the development stages. In machine learning(ML) this stages are different than a software development, a model depends not only on the code but also the data and hyperparameters, as well as deploying a model to production is more complex too.
 
-![image.png](/.attachments/image-f945fcb5-3bf7-4a42-87ab-906daf9683c3.png)
+![image](https://user-images.githubusercontent.com/88195980/190283262-1939ace3-136b-4c11-b54f-d82b69ca643f.png)
 
 **Continuous Integration (CI)**
 
@@ -123,7 +123,7 @@ Some examples of CD workflow:
 - Load testing and model latency.
 
 The next diagram describes deployment process
-![image.png](/.attachments/image-2652963b-7e07-47cd-b474-65715f813d20.png)
+![image](https://user-images.githubusercontent.com/88195980/190283285-099c2ffa-7ed1-42d8-90b5-b3047aae14a7.png)
 <!-- blank line -->
 
 -------------------------------------------
@@ -150,7 +150,7 @@ The main concepts that should be monitored are the following:
 
 The following drawing shows that the health of a Machine Learning system relies on hidden characteristics that are not easy to monitor therefore using the analogy of an iceberg.
 
-![image.png](/.attachments/image-38a1a449-5bda-4a5b-8268-a6d9abf20f01.png)
+![image](https://user-images.githubusercontent.com/88195980/190283315-9adcaebf-514d-4bba-b28e-ec1f325c30e1.png)
 <!-- blank line -->
 
 -------------------------------------------
