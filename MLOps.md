@@ -21,6 +21,7 @@ The use of code versioning tools is vital in the software development industry. 
 As much as these tools solve several problems in software development, there are still issues in machine learning projects. Code versioning is still crucial, but when working on new experiments it's important to guarantee the same properties for data and models.
 
 In a machine learning project, data scientists are continuously working on the development of new models. This process relies on trying different combinations of data, parameters, and algorithms. It's extremely positive to create an environment where it's possible to go back and forth on older or new experiments.
+
 ![image](https://user-images.githubusercontent.com/88195980/190283146-82f948b4-9cd2-4030-bd80-89bffbc49070.png)
 
 ### Reproducibility
@@ -41,7 +42,9 @@ To guarantee that the experimentation of the data science team will become a mod
 ## Feature Storing
 ### What is a Feature Store?
 **Feature Stores** are components of data architecture that are becoming increasingly popular in the Machine Learning and MLOps environment. The goal of a Feature Store is to process data from various data sources at the same time and turn it into features, which will be consumed by the model training pipeline and the model serving. The concept of Feature Stores is novice and rapidly changing, therefore this page has the objective of showing the key features that are more common among the main Feature Stores in the market, but at the same time it is important to note that some of the tools and frameworks in the market might not comprehend all those exact characteristics in the same manner.
+
 ![image](https://user-images.githubusercontent.com/88195980/190283188-2704a8aa-57c1-412d-9d4d-aae40b99f841.png)
+
 ### Why it matters?
 Feature Stores can be very useful for Machine Learning in production and are very reliable ways to manage features for research and training using Offline Stores, as it is to manage the feeding of features to a model served in production using an Online Store. This data component can manage to comprehend a wide spectrum of different projects and necessities, some of which are seen below.
 
@@ -90,6 +93,7 @@ Lets describe a three-level of automation in machine learning projects:
 The next diagram describes process of model retraining
 
 ![image](https://user-images.githubusercontent.com/88195980/190283220-7d8316a4-028d-45f8-b7e3-0b78313224ee.png)
+
 <!-- blank line -->
 
 -------------------------------------------
@@ -123,7 +127,9 @@ Some examples of CD workflow:
 - Load testing and model latency.
 
 The next diagram describes deployment process
+
 ![image](https://user-images.githubusercontent.com/88195980/190283285-099c2ffa-7ed1-42d8-90b5-b3047aae14a7.png)
+
 <!-- blank line -->
 
 -------------------------------------------
@@ -151,6 +157,7 @@ The main concepts that should be monitored are the following:
 The following drawing shows that the health of a Machine Learning system relies on hidden characteristics that are not easy to monitor therefore using the analogy of an iceberg.
 
 ![image](https://user-images.githubusercontent.com/88195980/190283315-9adcaebf-514d-4bba-b28e-ec1f325c30e1.png)
+
 <!-- blank line -->
 
 -------------------------------------------
