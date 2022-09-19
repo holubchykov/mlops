@@ -168,7 +168,7 @@ The following drawing shows that the health of a Machine Learning system relies 
 
 -------------------------------------------
 <!-- blank line -->
-## Big Two Comparison
+## Big Three Comparison
 
 ### Amazon SageMaker
 Amazon SageMaker is a cloud machine-learning platform that helps users in building, training, tuning and deploying machine learning models in a production ready hosted environment.
