@@ -11,6 +11,12 @@ MLOps is a methodology of operation that aims to facilitate the process of bring
   - Validating
   - Tracking experiments
   - Tracking models in production to detect performance degradation / gain
+
+General MLOps life cycle looks like this
+
+![image](https://user-images.githubusercontent.com/88195980/191032396-3584ee05-54e9-44bf-b550-63d3d507e59c.png)
+
+
 <!-- blank line -->
 
 -------------------------------------------
@@ -163,6 +169,80 @@ The following drawing shows that the health of a Machine Learning system relies 
 -------------------------------------------
 <!-- blank line -->
 ## Big Two Comparison
+
+### Amazon SageMaker
+Amazon SageMaker is a cloud machine-learning platform that helps users in building, training, tuning and deploying machine learning models in a production ready hosted environment.
+Some Benefits of Using AWS SageMaker:
+- Highly Scalable
+- Fast Training
+- Maintains Uptime — Process keeps on running without any stoppage.
+- High Data Security
+
+<IMG  src="https://d1.awsstatic.com/sagemaker/2022whiteupdate/overview-page/SageMaker%20Features.cafa389a0fa0e1c51230d9a4b68b4cce90e2dbfe.png"/>
+
+
+### Azure ML
+
+Azure Machine Learning Studio is Microsoft’s central point of contact for Machine Learning Computation in the Azure cloud. It is the successor of the Microsoft Machine Learning Studio Classic, which will be retired in 2024. Over the years Microsoft expanded the number of features and possibilities within their Azure ML Studio and the progress is still ongoing. Microsoft tries to make the creation of and the work with algorithms and experiments as simple as possible. Hence, you can expect that also Azure ML will get more and more features with automation and click surface than with hard-coded algorithms. But for now enough, let’s see the main components of the studio:
+
+The Azure ML Studio menu is divided into three main sections: 
+- Author. The section Author deals with the creation of the code and set-up of your machine learning processes.
+  - Notebooks: This section encompasses everything around the creation, editing, and running of notebooks.
+  - Automated ML: This section is for the easy automation and comparison of diverse machine learning techniques. You can easily input a dataset and see the performance of various ml techniques under diverse performance measures.
+  - Designer: The Designer is a drag and drop tool to create your ML workflow from the input of a dataset to the evaluation. It is easy to use and has many features which can be searched via text or found by clicking on the arrows and captions on the left.
+- Assets. Assets are the resources that are created and stored within the Author section such as the pipelines created in the Designer. It controls the resources’ whole workflow from inputting datasets over a pipeline to the endpoints for the output (e.g. connection to real systems via REST API).
+  - Datasets: As the name states the section is used to register and manage your datasets.
+  - Experiments: Experiments offer the possibility to measure runs with varying settings (e.g. hyperparamaters) and control the metrics.
+  - Pipelines: Via the Designer, the pipelines can be created and are registered within the section pipeline to control the number of runs, runtime, name, etc.
+  - Models: Useful to register and manage your models.
+  - Endpoints: Here you can control and see all endpoints over which you can let other systems and applications use your models/algorithms
+- Manage. The Manage section is for the system behind the scenes. It encompasses the computation clusters and instances, datastores on which the datasets are stored, and the integrations into other systems. It is somehow the invisible layer.
+  - Compute: This section lets you set up, start and stop compute clusters and instances as well as inference clusters on which your models are running
+  - Datastores: Comprise the storage on which datasets, models, notebooks, and all your files and data can be stored.
+  - Data Labeling: Honestly, I do not understand why this section is under Manage and not under Author. I believe the Data Labeling would fit better to the first section since it has to do with the data handling, but maybe it refers to the “management of your data” and that’s why it is under Manage. Under the section, you get great possibilities and support to label all of your data examples.
+  - Linked Services: This is for the integrations of other services and systems.
+
+### Azure Databricks
+Databricks Machine Learning is an integrated end-to-end machine learning platform incorporating managed services for experiment tracking, model training, feature development and management, and feature and model serving. The diagram shows how the capabilities of Databricks map to the steps of the model development and deployment process.
+
+<IMG  src="https://learn.microsoft.com/en-us/azure/databricks/scenarios/media/what-is-azure-databricks/ml-diagram.png"  alt="What is Databricks Machine Learning?"/>
+
+
+With Databricks Machine Learning, you can:
+
+- Train models either manually or with AutoML.
+- Track training parameters and models using experiments with MLflow tracking.
+- Create feature tables and access them for model training and inference.
+- Share, manage, and serve models using Model Registry.
+
+For machine learning applications, Databricks provides Databricks Runtime for Machine Learning, a variation of Databricks Runtime that includes many popular machine learning libraries.
+
+**Databricks Machine Learning features:**
+
+- **Feature store**
+
+Feature Store enables you to catalog ML features and make them available for training and serving, increasing reuse. With a data-lineage–based feature search that leverages automatically-logged data sources, you can make features available for training and serving with simplified model deployment that doesn’t require changes to the client application.
+
+- **Experiments**
+
+MLflow experiments let you visualize, search for, and compare runs, as well as download run artifacts and metadata for analysis in other tools. The Experiments page gives you quick access to MLflow experiments across your organization. You can track machine learning model development by logging to these experiments from Azure Databricks notebooks and jobs.
+
+- **Models**
+
+Azure Databricks provides a hosted version of MLflow Model Registry to help you to manage the full lifecycle of MLflow Models. Model Registry provides chronological model lineage (which MLflow experiment and run produced the model at a given time), model versioning, stage transitions (for example, from staging to production or archived), and email notifications of model events. You can also create and view model descriptions and leave comments.
+
+- **AutoML**
+
+AutoML enables you to automatically generate machine learning models from data and accelerate the path to production. It prepares the dataset for model training and then performs and records a set of trials, creating, tuning, and evaluating multiple models. It displays the results and provides a Python notebook with the source code for each trial run so you can review, reproduce, and modify the code. AutoML also calculates summary statistics on your dataset and saves this information in a notebook that you can review later.
+
+- **Databricks Runtime for Machine Learning**
+
+Databricks Runtime for Machine Learning (Databricks Runtime ML) automates the creation of a cluster optimized for machine learning. Databricks Runtime ML clusters include the most popular machine learning libraries, such as TensorFlow, PyTorch, Keras, and XGBoost, and also include libraries required for distributed training such as Horovod. Using Databricks Runtime ML speeds up cluster creation and ensures that the installed library versions are compatible.
+
+
+Let's compare two main services for MLOps
+
+
 | Name of Service | Additional Info |<IMG  src="https://nub8.net/wp-content/uploads/2019/07/amazon_sagemaker-min.png"  alt="Machine Learning with Amazon SageMaker » Nub8" width="250" height="75" >|<IMG  src="https://miro.medium.com/max/1127/1*-ganvHfXEbn6oYk-krRpIg.jpeg"  alt="Azure Machine Learning Service: Part 1 — An Introduction ..." width="150" height="75"> |
 |--|--|:----:|:----:|
 |Notebook Support||:heavy_check_mark:|:heavy_check_mark:|
