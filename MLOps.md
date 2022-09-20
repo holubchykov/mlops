@@ -267,3 +267,20 @@ Let's compare all three tools
 |Model monitoring||:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:
 |Responsible AI||:heavy_check_mark:Model Explainability|:heavy_check_mark: Model interpretability|:heavy_check_mark:
 |Augmented AI||:heavy_check_mark:|:x:|:x:
+  
+<!-- blank line -->
+
+-------------------------------------------
+<!-- blank line -->
+## Sources
+- [https://services.google.com/fh/files/misc/practitioners_guide_to_mlops_whitepaper.pdf](https://services.google.com/fh/files/misc/practitioners_guide_to_mlops_whitepaper.pdf)
+- [https://docs.databricks.com/applications/machine-learning/model-inference/index.html](https://docs.databricks.com/applications/machine-learning/model-inference/index.html)
+- [https://medium.com/@jcbaey/azure-databricks-hands-on-6ed8bed125c7](https://medium.com/@jcbaey/azure-databricks-hands-on-6ed8bed125c7)
+- [https://learn.microsoft.com/en-us/azure/databricks/scenarios/what-is-azure-databricks-ml](https://learn.microsoft.com/en-us/azure/databricks/scenarios/what-is-azure-databricks-ml)
+- [https://learn.microsoft.com/en-us/azure/databricks/scenarios/what-is-azure-databricks](https://learn.microsoft.com/en-us/azure/databricks/scenarios/what-is-azure-databricks)
+- [https://medium.com/@vineetjaiswal/introduction-comparison-of-mlops-platforms-aws-sagemaker-azure-machine-learning-gcp-vertex-ai-9c1153399c8e](https://medium.com/@vineetjaiswal/introduction-comparison-of-mlops-platforms-aws-sagemaker-azure-machine-learning-gcp-vertex-ai-9c1153399c8e)
+- [https://azure.microsoft.com/en-in/services/machine-learning/#documentation](https://azure.microsoft.com/en-in/services/machine-learning/#documentation)
+- [https://towardsdatascience.com/a-brief-introduction-to-azure-machine-learning-studio-9bbf41800a60](https://towardsdatascience.com/a-brief-introduction-to-azure-machine-learning-studio-9bbf41800a60)
+- [https://azure.microsoft.com/en-us/products/databricks/](https://azure.microsoft.com/en-us/products/databricks/)
+- [https://towardsdatascience.com/aws-sagemaker-db5451e02a79](https://towardsdatascience.com/aws-sagemaker-db5451e02a79)
+- [https://docs.databricks.com/](https://docs.databricks.com/)
