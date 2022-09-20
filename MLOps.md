@@ -240,30 +240,30 @@ AutoML enables you to automatically generate machine learning models from data a
 Databricks Runtime for Machine Learning (Databricks Runtime ML) automates the creation of a cluster optimized for machine learning. Databricks Runtime ML clusters include the most popular machine learning libraries, such as TensorFlow, PyTorch, Keras, and XGBoost, and also include libraries required for distributed training such as Horovod. Using Databricks Runtime ML speeds up cluster creation and ensures that the installed library versions are compatible.
 
 
-Let's compare two main services for MLOps
+Let's compare all three tools
 
 
-| Name of Service | Additional Info |<IMG  src="https://nub8.net/wp-content/uploads/2019/07/amazon_sagemaker-min.png"  alt="Machine Learning with Amazon SageMaker » Nub8" width="250" height="75" >|<IMG  src="https://miro.medium.com/max/1127/1*-ganvHfXEbn6oYk-krRpIg.jpeg"  alt="Azure Machine Learning Service: Part 1 — An Introduction ..." width="150" height="75"> |
-|--|--|:----:|:----:|
-|Notebook Support||:heavy_check_mark:|:heavy_check_mark:|
-|Jupyter Lab|Azure has entire custom interace|:heavy_check_mark:|:x:|
-|Computer instance|Azure gives more control over compute|at set-up time|can change via notebook|
-|Workflow pipeline support||:heavy_check_mark:|:heavy_check_mark:|
-|Studio/Low code/GUI and Drag and Drop support||:heavy_check_mark:|:heavy_check_mark:|
-|In-build Feature Store||:heavy_check_mark:|:x::heavy_exclamation_mark:Databricks FS can integrated:heavy_exclamation_mark:|
-|Automatic ML||:heavy_check_mark: Auto pilot|:heavy_check_mark: Automated ML|
-|Label the data|Both supporting outsorcing|:heavy_check_mark: Ground Truth|:heavy_check_mark:Data Labeling|
-|GPU Support||:heavy_check_mark: Framework optimised|:heavy_check_mark:Can install GPU drivers on compute|
-|Real time endpoint||:heavy_check_mark: Internal only via SDK|:heavy_check_mark: Internal via SDK & Public|
-|Offline job||:heavy_check_mark: Batch Transform|:heavy_check_mark: Pipeline|
-|In-build support for IoT||:heavy_check_mark: Neo|:x::heavy_exclamation_mark:Possible via IoT edge:heavy_exclamation_mark:|
-|In between data visualisation||:x: Almost No or very basic|:heavy_check_mark:|
-|A/B testing support||:heavy_check_mark:Traffic Routing|:x:|
-|Reinforcement Learning||:heavy_check_mark:|:heavy_check_mark:|
-|Kubernetes Suport||:heavy_check_mark:|:x:|
-|Multiple Model on same endpoint to save cost||:heavy_check_mark:MMS|:x:|
-|Automatic model debugging, tuning||:heavy_check_mark:Debugger Model Tuning|:x:|
-|Auto Scaling, edge optimization of endpoint||:heavy_check_mark:|:heavy_check_mark:|
-|Model monitoring||:heavy_check_mark:|:heavy_check_mark:|
-|Responsible AI||:heavy_check_mark:Model Explainability|:heavy_check_mark: Model interpretability|
-|Augmented AI||:heavy_check_mark:|:x:|
+| Name of Service | Additional Info |<IMG  src="https://nub8.net/wp-content/uploads/2019/07/amazon_sagemaker-min.png"  alt="Machine Learning with Amazon SageMaker » Nub8"  width="150" height="50">|<IMG  src="https://miro.medium.com/max/1127/1*-ganvHfXEbn6oYk-krRpIg.jpeg"  alt="Azure Machine Learning Service: Part 1 — An Introduction ..." width="200" height="60"> |<IMG  src="https://vslive.com/-/media/ECG/VSLive/Blogs/AzureDatabricks.jpg"  alt="Azure Databricks: What Is It and What Can You Do with It? -- Visual Studio  Live!: Training Conferences and Events for Enterprise Microsoft .NET and  Azure Developers" width="200" height="75">|
+|--|--|:----:|:----:| :---: |
+|Notebook Support||:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|
+|Jupyter Lab|Azure has entire custom interace|:heavy_check_mark:|:x:|:heavy_check_mark:|
+|Computer instance|Azure gives more control over compute|at set-up time|can change via notebook|can be changed
+|Workflow pipeline support||:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:
+|Studio/Low code/GUI and Drag and Drop support||:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:
+|In-build Feature Store||:heavy_check_mark:|:x::heavy_exclamation_mark:Databricks FS can integrated:heavy_exclamation_mark:|:heavy_check_mark:
+|Automatic ML||:heavy_check_mark: Auto pilot|:heavy_check_mark: Automated ML|:heavy_check_mark: AutoML|
+|Label the data|Both supporting outsorcing|:heavy_check_mark: Ground Truth|:heavy_check_mark:Data Labeling|:heavy_check_mark: Labelbox
+|GPU Support||:heavy_check_mark: Framework optimised|:heavy_check_mark:Can install GPU drivers on compute|:heavy_check_mark:
+|Real time endpoint||:heavy_check_mark: Internal only via SDK|:heavy_check_mark: Internal via SDK & Public|:heavy_check_mark:
+|Offline job||:heavy_check_mark: Batch Transform|:heavy_check_mark: Pipeline|:heavy_check_mark: Batch and streaming
+|In-build support for IoT||:heavy_check_mark: Neo|:x::heavy_exclamation_mark:Possible via IoT edge:heavy_exclamation_mark:|:x:
+|In-build data visualisation||:x: Almost No or very basic|:heavy_check_mark:|:heavy_check_mark:
+|A/B testing support||:heavy_check_mark:Traffic Routing|:x:|:heavy_check_mark:
+|Reinforcement Learning||:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:
+|Kubernetes Suport||:heavy_check_mark:|:x:|:heavy_check_mark:
+|Multiple Model on same endpoint to save cost||:heavy_check_mark:MMS|:x:|:heavy_check_mark:
+|Automatic model debugging, tuning||:heavy_check_mark:Debugger Model Tuning|:x:|:heavy_check_mark:
+|Auto Scaling, edge optimization of endpoint||:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:
+|Model monitoring||:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:
+|Responsible AI||:heavy_check_mark:Model Explainability|:heavy_check_mark: Model interpretability|:heavy_check_mark:
+|Augmented AI||:heavy_check_mark:|:x:|:x:
