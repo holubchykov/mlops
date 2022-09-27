@@ -168,7 +168,7 @@ The following drawing shows that the health of a Machine Learning system relies 
 
 -------------------------------------------
 <!-- blank line -->
-## Big Three Comparison
+## Big Comparison
 
 ### Amazon SageMaker
 Amazon SageMaker is a cloud machine-learning platform that helps users in building, training, tuning and deploying machine learning models in a production ready hosted environment.
@@ -179,6 +179,11 @@ Some Benefits of Using AWS SageMaker:
 - High Data Security
 
 <IMG  src="https://d1.awsstatic.com/sagemaker/2022whiteupdate/overview-page/SageMaker%20Features.cafa389a0fa0e1c51230d9a4b68b4cce90e2dbfe.png"/>
+
+This is how AWS pipeline looks like
+
+![image](https://user-images.githubusercontent.com/88195980/192415507-7577f9e6-7cbb-4ea1-bae0-1b086212ac32.png)
+
 
 
 ### Azure ML
@@ -239,8 +244,119 @@ AutoML enables you to automatically generate machine learning models from data a
 
 Databricks Runtime for Machine Learning (Databricks Runtime ML) automates the creation of a cluster optimized for machine learning. Databricks Runtime ML clusters include the most popular machine learning libraries, such as TensorFlow, PyTorch, Keras, and XGBoost, and also include libraries required for distributed training such as Horovod. Using Databricks Runtime ML speeds up cluster creation and ensures that the installed library versions are compatible.
 
+This is how Azure Databricks looks like
 
-Let's compare all three tools
+![image](https://user-images.githubusercontent.com/88195980/192415825-55c95c56-624d-4241-ac4a-d2aa781d5b6c.png)
+
+### Kuberflow
+Kubeflow is a free and open-source machine learning platform designed to enable using machine learning pipelines to orchestrate complicated workflows running on Kubernetes. Kubeflow was based on Google’s internal method to deploy TensorFlow models called TensorFlow Extended.
+
+The Kubeflow project is dedicated to making deployments of machine learning (ML) workflows on Kubernetes simple, portable and scalable.
+
+It is an end-to-end Machine Learning platform for Kubernetes.
+It provides components for each stage in the ML lifecycle, starting from exploration of data, model training, and deployment.
+Operators can select the best-trained model for the end-users, with no need to deploy every component.
+
+The set of tools available in Kubeflow helps the ML engineers/Data scientists in:
+- Data Exploration.
+- Build/Train machine learning models.
+- Analyze the model performance.
+- Hyper-parameter tuning.
+- Version different model.
+- Manage compute power.
+- Serving infrastructure.
+- Deploying the best model to production.
+
+It runs on Kubernetes clusters, we can run it either locally or in the cloud.
+It boosts the power of training the machine learning models on multiple nodes (i.e., computers).
+Reduce the model training time.
+
+The Kubeflow user interface consists of the following:
+
+![image](https://user-images.githubusercontent.com/88195980/192416829-0d666d6e-afc2-43f4-9e91-26d5e846f437.png)
+
+
+- **Home:** Central Hub to view, access resources recently used, active experiments, and useful documentation.
+- **Notebook Servers:** Manage Notebooks servers.
+- **TensorBoards:** Manage servers of TensorBoards.
+- **Models:** Manage deployed KFServing models.
+- **Volumes:** Manage cluster’s Volume.
+- **AutoML Experiments:** Manage Katlib experiments.
+- **KFP Experiments:** Manage Kubeflow Pipelines (KFP) experiments.
+- **Pipelines:** Manage Kubeflow Pipelines.
+- **Runs:** Manage KFP runs.
+- **Recurring Runs:** Manage KFP recurring runs.
+- **Artifacts:** To track ML Metadata (MLMD) artifacts.
+- **Execution:** To track various component execution in MLMD.
+- **Manage Contributors:** Configure user access sharing across namespaces in the Kubeflow
+
+To access the central dashboard, you need to connect to the Istio gateway that provides access to the Kubeflow service mesh.
+How you access the Istio gateway varies depending on how you’ve configured it.
+
+**Kubeflow Notebooks**
+
+Kubeflow Notebooks, a web-based development environment inside our Kubernetes clusters by running them inside the pods.
+
+Users can spin up the notebook servers either using Jupyter lab, R Studio, or Visual Studio Code (code-server).
+It can be done directly from the dashboard, allocating the right storage, CPUs, and GPUs.
+
+You can create notebook containers directly in the cluster, rather than locally on their workstations.
+Admins can provide standard notebook images for their organization with required packages pre-installed.
+Kubeflow’s RBAC can be used to manage the access control that enables easier notebook sharing across the organization.
+
+**ML Libraries and Framework.**
+
+It is compatible with all the required machine learning libraries and frameworks like TensorFlow, PyTorch, XGBoost, sci-kit-learn, MXNet, Keras, and many more.
+
+**Kubeflow Pipelines**
+
+Kubeflow pipeline is a platform for building and deploying scalable, and portable machine learning workflows based on Docker containers.
+
+We can automate our ML workflow into pipelines by containerizing steps as pipeline components and defining inputs, outputs, parameters, and generated artifacts.
+
+So, a big question comes into mind what is a pipeline?
+Let’s answer that question first.
+
+**What is Pipeline?**
+
+ML pipeline is a means of automating the machine learning workflow by enabling data to be transformed and correlated into a model that can also be anatomized to achieve outputs. This type of ML pipeline makes the process of inputting data into the ML model completely automated.
+
+ML pipeline is the end-to-end construct that orchestrates the inflow of data into, and output from, a machine learning model (or set of multiple models). It includes raw data input, features, outputs, the machine learning model and model parameters, and prediction outputs.
+
+In Kubeflow, the pipeline component is a self-contained set of user code, packaged as a Docker image, that performs one step in the pipeline. For example, a component can be responsible for data preprocessing, data transformation, model training, and so on.
+
+While writing the code of the pipeline component make sure that all the necessary libraries that are needs to be imported should be defined within the function.
+
+Each pipeline component should be independent of dependencies. This will helps us in many ways.
+For example: If we got any failure in the pipeline so, we could easily identify the component which holds the issue and troubleshoot it without impacting other components.
+
+**Katlib for Hyperparameter tuning/AutoML**
+- Katlib is the component of Kubeflow that is used for hyperparameter tuning, neural architecture search.
+- Katib is a Kubernetes-native project for automated machine learning (AutoML).
+- It runs pipelines with different hyperparameters, optimizing for the best ML model.
+- Katib is agnostic to machine learning (ML) frameworks.
+- It can tune hyperparameters of applications written in any language of the users’ choice and natively supports many ML frameworks, such as TensorFlow, MXNet, PyTorch, XGBoost, and others.
+
+Automated Machine Learning (AutoML) is a way to automate the process of applying machine learning algorithms to solve real-world problems.
+Basically, it automates the process of feature selection, composition, and parameterization of machine learning models.
+
+Katlib supports a lot of various AutoML algorithms, such as Bayesian optimization, Tree of Parzen Estimators, Random Search, Covariance Matrix Adaptation Evolution Strategy, Hyperband, Efficient Neural Architecture Search, Differentiable Architecture Search, and many more.
+
+**and many more…**
+
+Kubeflow provides the integration that you need.
+It integrates with MLFlow for the model registry, staging, and monitoring in production, Seldon Core for inference serving, and Apache Spark for parallel data processing.
+
+Training of ML models in Kubeflow through operators like TFJobs, PyTorchJob, MXJob, XGBoostJob, and MPIJob.
+
+You can schedule your jobs also with gang scheduling.
+
+![image](https://user-images.githubusercontent.com/88195980/192417289-baf94702-bc94-4c83-bd82-8c827f9ae575.png)
+
+
+
+
+**Let's compare three main tools**
 
 
 | Name of Service | Additional Info |<IMG  src="https://nub8.net/wp-content/uploads/2019/07/amazon_sagemaker-min.png"  alt="Machine Learning with Amazon SageMaker » Nub8"  width="150" height="50">|<IMG  src="https://miro.medium.com/max/1127/1*-ganvHfXEbn6oYk-krRpIg.jpeg"  alt="Azure Machine Learning Service: Part 1 — An Introduction ..." width="200" height="60"> |<IMG  src="https://vslive.com/-/media/ECG/VSLive/Blogs/AzureDatabricks.jpg"  alt="Azure Databricks: What Is It and What Can You Do with It? -- Visual Studio  Live!: Training Conferences and Events for Enterprise Microsoft .NET and  Azure Developers" width="200" height="75">|
@@ -284,3 +400,4 @@ Let's compare all three tools
 - [https://azure.microsoft.com/en-us/products/databricks/](https://azure.microsoft.com/en-us/products/databricks/)
 - [https://towardsdatascience.com/aws-sagemaker-db5451e02a79](https://towardsdatascience.com/aws-sagemaker-db5451e02a79)
 - [https://docs.databricks.com/](https://docs.databricks.com/)
+- [https://medium.com/@knoldus/kubeflow-a-complete-solution-to-mlops-7208deeb80e5](https://medium.com/@knoldus/kubeflow-a-complete-solution-to-mlops-7208deeb80e5)
